@@ -1,0 +1,8 @@
+FROM rabbitmq:management
+
+# ENV RABBITMQ_LOGS  /dev/stdout/rabbitmq.log
+ENV RABBITMQ_HIPE_COMPILE "1"
+
+
+ADD docker-entrypoint.sh /
+
