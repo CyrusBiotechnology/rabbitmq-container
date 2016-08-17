@@ -4,6 +4,7 @@ FROM rabbitmq:management
 ENV RABBITMQ_HIPE_COMPILE "1"
 
 
-ADD docker-entrypoint.sh /
+ADD entrypoint-wrapper.sh /entrypoint-wrapper.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh", "rabbitmq-server"]
+ENTRYPOINT ["/entrypoint-wrapper.sh"]
+CMD ["rabbitmq-server"]
