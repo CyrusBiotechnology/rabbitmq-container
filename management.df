@@ -6,3 +6,4 @@ ENV RABBITMQ_HIPE_COMPILE "1"
 
 ADD docker-entrypoint.sh /
 
+ENTRYPOINT ["/docker-entrypoint.sh", "rabbitmq-server"]

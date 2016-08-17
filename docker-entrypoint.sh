@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -x
 # Try to extract the hostname, first from RABBITMQ_NODENAME, then NODENAME
 _NAME=`echo "$RABBITMQ_NODENAME" | awk -F '@' '{print $2}'`
 [ -n "$_NAME" ] || NAME=`echo "$NODENAME" | awk -F '@' '{print $2}'`
