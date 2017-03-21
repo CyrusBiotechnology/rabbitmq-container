@@ -1,4 +1,4 @@
-FROM rabbitmq:management
+FROM rabbitmq:3.6.6-management
 
 # ENV RABBITMQ_LOGS  /dev/stdout/rabbitmq.log
 
